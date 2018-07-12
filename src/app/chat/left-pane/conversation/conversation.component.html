@@ -1,0 +1,13 @@
+<ul class="chat-list list-unstyled">
+    <li class="media chat-list-item" *ngFor="let chat of chatList" (click)="changeSelectedChat(chat.email)">
+        <img src="assets/images/user.png" width="60" class="d-flex mr-3 rounded-circle user-image">
+        <div class="media-body">
+            <h5 class="mt-0 mb-1 user-name">{{chat.firstName}}&nbsp;{{chat.lastName}}</h5>
+            <p class="user-message">{{chat.message}}
+                <span class="badge"></span>
+            </p>
+            <span class="received-time">{{chat.timestamp | date}}</span>
+
+        </div>
+    </li>
+</ul>

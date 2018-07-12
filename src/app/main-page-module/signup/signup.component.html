@@ -1,0 +1,71 @@
+<section class="signup-section" id="signupsec" data-spy="scroll" data-target="#home-nav" data-offset="0">
+	<div class="container">
+		<form class="signup" #signupForm="ngForm">
+			<h2 class="section-heading">Join Now</h2>
+			<div class="row">
+				<div class="user-type text-center">
+					<input type="radio" name="role" id="role-mentor" value="true" required [(ngModel)]="signupObj.isMentor"/>
+					<label class="user-wrap" for="role-mentor">
+						<div class="user">
+							<span class="checkbox"></span>
+							<img class="img-fluid" src="assets/images/mentor.png" width="150"/>
+						</div>
+						<h3 class="title">As a Mentor</h3>
+					</label>
+					<p class="user-divider">OR</p>
+					<input type="radio" name="role" id="role-student" value="false" required [(ngModel)]="signupObj.isMentor"/>
+					<label class="user-wrap" for="role-student">
+						<div class="user">
+							<span class="checkbox"></span>
+							<img class="img-fluid" src="assets/images/student.png" width="150"/>
+						</div>
+						<h3 class="title">As a Student</h3>
+					</label>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-6 form-group input-focus-animation">
+					<label for="firstName">First Name</label>
+					<input class="form-control" id="firstName" name="firstName" required type="text" [(ngModel)]="signupObj.firstName" #firstName="ngModel"/>
+					<span class="input-border"></span>
+					<span *ngIf="!firstName.valid && !firstName.untouched" class="form-control" style="color:red;border:none !important;">First name is required</span>
+				</div>
+				<div class="col-sm-6 form-group input-focus-animation">
+					<label for="lastName">Last Name</label>
+					<input class="form-control" id="lastName" name="lastName" required type="text" [(ngModel)]="signupObj.lastName" #lastName="ngModel"/>
+					<span class="input-border"></span>
+					<span *ngIf="!lastName.valid && !lastName.untouched" class="form-control" style="color:red;border:none !important;">Last name is required</span>
+				</div>
+				<div class="col-sm-6 form-group input-focus-animation">
+					<label for="email">Email</label>
+					<input class="form-control" id="email" name="email" required type="email" [(ngModel)]="signupObj.email" #email="ngModel"/>
+					<span class="input-border"></span>
+					<span *ngIf="!email.valid && !email.untouched" class="form-control" style="color:red;border:none !important;">Email is required</span>
+				</div>
+				<div class="col-sm-6 form-group input-focus-animation">
+					<label for="mobile">Mobile</label>
+					<input class="form-control" id="mobile" name="mobile" required type="tel" [(ngModel)]="signupObj.mobileNumber" #mobile="ngModel"
+					pattern="[0-9]*" />
+					<span class="input-border"></span>
+					<span *ngIf="!mobile.valid && !mobile.untouched && !signupObj.mobileNumber" class="form-control" style="color:red;border:none !important;">Mobile number is required</span>
+					<span *ngIf="!mobile.valid && !mobile.untouched && signupObj.mobileNumber" class="form-control" style="color:red;border:none !important;">Mobile number should be numeric</span>
+				</div>
+				<div class="col-sm-6 form-group input-focus-animation">
+					<label for="password">Password</label>
+					<input class="form-control" id="password" type="password" required name="password" [(ngModel)]="signupObj.password" #password="ngModel"/>
+					<span class="input-border"></span>
+					<span *ngIf="!password.valid && !password.untouched" class="form-control" style="color:red;border:none !important;">Password is required</span>
+				</div>
+				<div class="col-sm-6 form-group input-focus-animation">
+					<label for="confirmpassword">Confirm Password</label>
+					<input class="form-control" id="confirmpassword" type="password" required name="confirm" [(ngModel)]="confirmPassword" #confirmPass="ngModel"/>
+					<span class="input-border"></span>
+					<span *ngIf="!confirmPass.valid && !confirmPass.untouched" class="form-control" style="color:red;border:none !important;">Password is required</span>
+				</div>
+				<div class="col-sm-12 text-center mt-2">
+					<button class="btn primary-color" [disabled]="!signupForm.valid" (click)="signup()">Sign Up</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</section>

@@ -1,0 +1,3 @@
+  <app-top-bar [selectedUserName]="selectedUserName" (deleteChatEvent)="deleteChatFunc($event)"></app-top-bar>
+  <app-messaging [selectedChat]="selectedChat"></app-messaging>
+  <app-msg-input (sendMessageEvent)="sendMessage($event)"></app-msg-input>

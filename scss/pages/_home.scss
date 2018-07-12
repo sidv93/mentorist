@@ -1,0 +1,227 @@
+// Global
+.section-heading{
+	color: #000000;
+    font-size: 36px;
+    font-weight: bold;
+	margin-bottom: 50px;
+}
+.section-heading:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #DA161A;
+	margin-top: 5px;
+}
+
+// Home page first section
+
+.banner{
+	// background: $primary-color;
+	background-image: url("/assets/images/homebg.jpeg");
+	// height: calc(100% - #{$nav-height});
+	padding: 80px 0px;
+	min-height: 100vh;	
+	background-size: cover;
+	margin-top: $nav-height;
+
+
+	.banner-content{
+		background-color: rgba(0,0,0,0.68);
+		padding: 25px;
+		width:80%;
+		min-height: 400px;
+		margin: 0px auto;
+		border-radius: 18px;
+		margin-bottom: 40px;
+
+		.banner-title{
+			font-size: 38px;
+			color: #fff;
+			font-weight: bold;
+		}
+		p.desc{
+			color: #fff;
+			width: 90%;
+			margin: 15px auto;
+		}
+		.btn{
+			margin-bottom: 15px; 
+		}
+	}	
+	.banner-title{
+			font-size: 38px;
+			color: #fff;
+			font-weight: bold;
+	}
+
+	.role-slider-card{
+		padding: 2%;
+		background-color: #fff;
+		box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); 
+		border-radius: 18px;
+		margin: 0px auto 30px;
+		width: 80%;
+		min-height: 400px;
+		.owl-carousel .owl-item img{
+			display: inline-block;
+			width: 150px;
+			padding: 0.8px;
+			// border-radius: 50%;
+			// border: 6px solid $primary-color;
+		}
+		.title{
+				color: $primary-color;
+				margin-bottom: 20px;
+			}
+		.desc{
+			color: $secondary-color;
+			width: 92%;
+			margin: 15px auto;
+		}
+		.owl-prev,.owl-next{
+			color: $primary-color;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			border-radius: 50%;
+
+		}
+		.owl-prev{
+			left: 2%;
+		}
+		.owl-next{
+			right: 2%;
+		}
+	}
+}
+.signup-section{
+	padding: 80px 0px;
+	min-height: 100vh;
+	background: $primary-color url("../images/signupbg.png") repeat;
+	background-attachment: fixed;
+	
+	.signup{
+		padding: 40px;
+		width: 90%;
+		margin: 0px auto;
+		background: #fff;
+		box-shadow: -1px 0px 24px 2px rgba(0,0,0,0.62);
+		
+		.btn{
+			padding: 10px 65px;
+		}
+	}
+	.user-type{
+			margin: 0px auto;
+			
+		.title{
+			font-size: 18px;
+			margin: 15px 0px;
+			color: $secondary-color;
+		}
+		input[type="radio"]{
+			display: none;
+		}
+		.user-wrap{
+			display: inline-block;
+			opacity: 0.5;
+			vertical-align: middle;
+
+			&:hover{
+				cursor: pointer;
+			}
+		}
+		.user-divider{
+			display: inline-block;
+			color: $primary-color;
+			vertical-align: middle;
+		}
+		.user{
+			position: relative;
+			display: inline-block;
+			max-width: 150px;
+			max-height: 150px;
+			border: 1px solid $primary-color;
+			margin: 10px 25px;
+
+			img{
+				padding: 10%;
+			}
+		
+			.checkbox{
+				display: block;
+				height: 20px;
+				width: 20px;
+				border: 2px solid #DDD;
+				position: absolute;
+				top: 5px;
+				border-radius: 50%;	
+				right: 5px;
+				z-index: 100;
+			}
+			.checkbox:after{
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%); 
+				display: none;
+				width: 10px;
+				height: 10px;
+				left: 19%;	 
+				border-radius: 50%;
+				background-color: $primary-color;
+				animation: ripple-s 1.5s;
+			}
+		}
+		input[type="radio"]:checked + label.user-wrap{
+			opacity: 1;
+			transition: 0.3s ease-in-out;
+	
+			.checkbox{
+				border: 2px solid $primary-color;
+			}
+			.checkbox:after{
+				display: block;
+				transition: 0.3s ease-in-out;
+			}
+		}
+	}
+}	
+
+// HOW_IT_WORKS SECTION
+.work-flow{
+	padding: 80px 0px;
+	min-height: 100vh;
+}
+	.flow-card-wrap{
+    	max-width: 700px;
+    	margin: 0px auto;
+
+		.flow-card{
+    		padding-bottom: 12%;
+    		background-size: 80% 40%;
+    		background-repeat: no-repeat;
+    		background-position:bottom;
+			
+			&.even{
+    			background-image: url("/assets/images/la.png");
+			}
+			&.even:last-child{
+    			background-image: none; 
+			}
+			&.odd{
+    			background-image: url("/assets/images/ra.png");
+			}
+		}
+	}	
+@media (max-width: 576px){
+    .flow-card-wrap .flow-card.even,.flow-card-wrap .flow-card.odd{	
+        background-image: none;
+        padding:20px 5px;
+    }
+	.flow-card.even{
+		background-color:  rgb(1, 183, 171);
+        color: #fff;
+	}
+}

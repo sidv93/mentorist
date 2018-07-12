@@ -1,0 +1,27 @@
+<div class="chat-box">
+  <div *ngIf="selectedChat">
+    <div *ngFor="let chats of selectedChat.chats">
+      <div class="row no-gutters" *ngIf="globalService.user == chats.receiver">
+        <div class="col-md-6 received">
+          <img src="assets/images/user.png" width="45" class="rounded-circle">
+          <p class="received-txt">{{chats.message}}</p>
+          <span class="received-time">{{chats.timestamp | date}}</span>
+        </div>
+      </div>
+      <div class="row no-gutters" *ngIf="globalService.user != chats.receiver">
+        <div class="col-md-6 ml-md-auto sent">
+          <img src="assets/images/user.png" width="45" class="rounded-circle">
+          <p class="sent-txt">{{chats.message}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row no-gutters">
+    <div class="received typing-indicator typing">
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+      <span class="indicator"></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<form class="form-inline my-2 my-lg-0" #loginForm="ngForm">
+	<input class="form-control mr-sm-2" type="text" placeholder="Username or Email" required name="userId" [(ngModel)]="loginObj.userId" #userId="ngModel"/>
+	<span style="color: white;" *ngIf="!userId.valid && !userId.untouched">User ID is required</span>
+	<input class="form-control mr-sm-2" type="Password" placeholder="Password" required name="password" [(ngModel)]="loginObj.password" #pass="ngModel"/>
+	<span style="color: white;" *ngIf="!pass.valid && !pass.untouched">Password is required</span>
+	<button class="btn btn-success my-2 my-sm-0" [disabled]="!loginForm.valid" (click)="login()">Sign In</button>
+</form>

@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<section *ngIf = "!globalservice.emailVerfication" class="banner text-center" id="home">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<app-description-small></app-description-small>
+			</div>
+			<div class="col-lg-6">
+				<app-carousel></app-carousel>
+			</div>
+		</div>
+	</div>
+</section>
+
+<app-signup *ngIf = "!globalservice.emailVerfication"></app-signup>
+	
+<app-how-it-works *ngIf = "!globalservice.emailVerfication"></app-how-it-works>
+<app-registration-landing *ngIf = "globalservice.emailVerfication"></app-registration-landing>

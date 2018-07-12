@@ -1,0 +1,64 @@
+.confirm-landing{
+    background-color: #f4f4f4;
+    height: 100vh;
+    width: 100%;
+    padding: 12vh 0px;
+}
+.confirm-landing__container{
+    margin: 0px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+    padding: 5% 10%;
+}
+.confirm-landing__container h2{
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -.01em;
+    margin-bottom: 40px;
+}
+.confirm-langing__img{
+    animation: tada 1.8s linear;
+    margin: 35px 0px;
+}
+.confirm-landing__uname{
+    display: block;
+    color:  #204056;
+    font-weight: bold;
+    margin: 20px 5px;
+    font-size: 20px;
+}
+.confirm-landing__container p{
+    margin: 20px 0 0 0;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #777;
+}
+.confirm-landing__container p a {
+    color: #3a8bbb;
+    text-decoration: none;
+}
+
+@Keyframes tada {
+    0% {
+        transform: scaleX(1)
+    }
+
+    10%,20% {
+        transform: scale3d(.9,.9,.9) rotate(-4deg)
+    }
+
+    30%,50%,70%,90% {
+        transform: scale3d(1.1,1.1,1.1) rotate(4deg)
+    }
+
+    40%,60%,80% {
+        transform: scale3d(1.1,1.1,1.1) rotate(-4deg)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}

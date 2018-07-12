@@ -1,0 +1,15 @@
+@keyframes ripple-s
+{
+    0% { 
+        box-shadow:
+        0px 0px 0px 0px rgba(1,183,171,1), 
+        0px 0px 0px 0px rgba(1,183,171,.7),
+        0px 0px 0px 0px rgba(1,183,171,.5);
+        }
+        100% { 
+        box-shadow:
+        0px 0px 0px 7.5px rgba(1,183,171,0),
+        0px 0px 0px 15px rgba(1,183,171,0),
+        0px 0px 0px 22.5px rgba(1,183,171,0);
+        }
+}

@@ -1,0 +1,14 @@
+<div class="chat-app-wrap">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <aside class="chat-list-section col-lg-4">
+          <app-left-pane [chatList]="chatList" (switchChatEvent)="changeSelectedChat($event)" (openNewChat)="openNewChat()"></app-left-pane>
+      </aside>
+      <section class="chat-box-section col-lg-8">
+          <app-right-pane [selectedUserName]="selectedUserName" [selectedChat]="selectedChat" (messageEvent)="sendMessage($event)"
+          (deleteChat)="deleteChatFunc($event)"></app-right-pane>
+      </section>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,13 @@
+@media (max-width: 768px){
+    .signup{ 
+        .user-wrap{
+        width: 50%;
+        margin: 10px auto;
+        }
+        .user-type .user-divider{
+            display: none;
+            opacity: 0;
+            transition: 0.4s ease;
+        }    
+    }
+}

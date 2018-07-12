@@ -1,0 +1,43 @@
+.input-focus-animation{
+	position: relative;
+	padding-top: 15px;
+
+	label{	
+		color: #a5a5a5;
+		position: absolute;
+		top: 25px;
+		transition: 0.4s ease-in-out; 
+	}
+	input{
+		border: none;
+		border-bottom: 1.2px solid #ccc;
+		border-radius: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+		background-color: transparent;
+
+		&:focus{
+		transition: 1.5s;
+		border-bottom: 1.2px solid transparent;
+		}
+	}
+	.input-border{
+		display: block;
+		width: 0%;
+    	height: 0;
+    	background-color: $primary-color;
+		transition: all 0.7s ease-in-out;
+		padding: 0.6px 0px;
+    	margin-top: -1px;
+	}
+}
+.input-focus-animation.active{
+	label{	
+		top: 0px;
+		color: $primary-color;
+		transition: 0.5s ease-in-out;
+	}
+	.input-border{
+		width: 100%;
+	}
+}
